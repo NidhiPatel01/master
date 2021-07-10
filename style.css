@@ -1,109 +1,70 @@
 * {
     box-sizing: border-box;
+	font-family: Red Hat Display;
+	font-weight: normal;
+	font-style:normal;
   }
-.title {
-	position: relative;
-	font-family: Red Hat Display;
-	font-style: normal;
-	font-weight: normal;
+  
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header{
+    display:flex;
+    justify-content: center;
 	font-size: 40px;
-	line-height: 53px;
-	margin:50px;
-	text-decoration:  underline lightblue;
-	padding-left: 40px;
+	text-decoration: underline lightblue;
 }
-
-.main {
-	position: relative;
-	margin-top: 110px;
-	line-height: 40px;
-	padding-top: 80px;
-	margin:30px;
-	display: flex;
-	padding-left: 50px;
-	padding-right: 80px;
-	margin:30px;
+#column-2{
+    padding: 5%;
 }
-	
-.t1{
-    position: relative;
-	font-size: 30px;
-	font-weight: normal;
-    font-family: Red Hat Display;
-    margin-top: 100px;
-	line-height: 40px;
-	padding-top: 80px;
-	margin:30px;
+#column-3{
+    padding: 5%;
 }
-
-.c1{
-	font-family: Red Hat Display;
-	position: relative;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 26px;
-	text-align: justify;
-	color: #616161;
-	padding-left: 50px;
-	padding-right: 50px;
-
-}
-
-.t2{
-    position: relative;
-	font-size: 30px;
-	font-weight: normal;
-    font-family: Red Hat Display;
-    margin-top: 110px;
-	line-height: 40px;
-	padding-top: 80px;
-	padding-left: 50px;
-	margin:30px;
+#column-6{
+    padding: 5%;
 }
   
-.c2{
-	font-family: Red Hat Display;
-	position: relative;
-	font-style: normal;
-	font-weight: normal;
+@media screen and (max-width: 900px) {
+.column {
+    width: 100%;
 	font-size: 20px;
-	line-height: 26px;
-	text-align: justify;
-	color: #616161;
-	padding-left: 50px;
-	padding-right: 50px;
-	
+}
+#column-1{
+    display:flex;
+    justify-content:center;
+}
+#column-4{
+	display:flex;
+    justify-content:center;
+}
+#column-3{
+    position: absolute;
+    top:1090px;
+}
+#column-5{
+    position: absolute;
+    top:1500px;
+    display:flex;
+    justify-content:center;
+}
+#column-6{
+    position: absolute;
+    top:1800px;
+}
 }
 
-.t3{
-    position: relative;
-	font-size: 30px;
-	font-weight: normal;
-    font-family: Red Hat Display;
-    margin-top: 100px;
-	line-height: 40px;
-	padding-top:80px;
-	margin:30px;
+@media screen and (max-width: 470px){
+.header{
+   font-size:40px;
 }
-
-.c3{
-	font-family: Red Hat Display;
-	position: relative;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 26px;
-	text-align: justify;
-	color: #616161;
-	padding-right:50px;
-	padding-left: 50px
-	
-}
-
-.img{
-	
-	width:auto;
-	height:auto;
-	padding-bottom:20px;
-}
+} 
